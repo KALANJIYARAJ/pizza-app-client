@@ -100,7 +100,7 @@ function AdminNav() {
                 </Link>
               </li>
             </ul>
-            <Link className="nav-link text-white me-3">{user.name}</Link>
+            <div className="nav-link text-white me-3">{user.name}</div>
             <Link className="nav-link text-white me-3" to={"/logout"}>
               Logout
             </Link>
