@@ -100,9 +100,7 @@ function AdminNav() {
                 </Link>
               </li>
             </ul>
-            <Link className="nav-link text-white me-3" to={"/profile"}>
-              {user.name}
-            </Link>
+            <Link className="nav-link text-white me-3">{user.name}</Link>
             <Link className="nav-link text-white me-3" to={"/logout"}>
               Logout
             </Link>
