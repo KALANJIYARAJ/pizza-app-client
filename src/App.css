@@ -36,3 +36,51 @@
     transform: rotate(360deg);
   }
 }
+
+.error-box {
+  border: 1px solid red !important;
+}
+
+.succes-box {
+  border: 1px solid green !important;
+}
+
+.fond-color {
+  color: red !important;
+}
+
+.forcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.removeUnderLine {
+  text-decoration: none;
+}
+
+input[type="radio"]:checked {
+  background-color: green;
+}
+
+.gradient-custom {
+  background: #f6d365;
+
+  background: -webkit-linear-gradient(
+    to right bottom,
+    rgba(246, 211, 101, 1),
+    rgba(253, 160, 133, 1)
+  );
+
+  background: linear-gradient(
+    to right bottom,
+    rgba(246, 211, 101, 1),
+    rgba(253, 160, 133, 1)
+  );
+}
+
+.hover {
+  color: black;
+  background-color: transparent;
+}
