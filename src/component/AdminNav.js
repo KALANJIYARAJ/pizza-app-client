@@ -103,9 +103,6 @@ function AdminNav() {
             <Link className="nav-link text-white me-3" to={"/profile"}>
               {user.name}
             </Link>
-            <Link className="nav-link text-white me-3" to={"/orderitems"}>
-              Your Order
-            </Link>
             <Link className="nav-link text-white me-3" to={"/logout"}>
               Logout
             </Link>
