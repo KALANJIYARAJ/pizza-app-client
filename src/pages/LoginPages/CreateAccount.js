@@ -46,7 +46,7 @@ function CreateAccount() {
         error.password = "Please Enter a valid password";
       }
 
-      if (values.password && values.password.length !== 8) {
+      if (values.password && values.password.length <= 7) {
         error.password = "pasword must 8 characters";
       }
 
@@ -133,10 +133,10 @@ function CreateAccount() {
                   <label>Password</label>
                   <input
                     name="password"
+                    type="password"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
                     value={formik.values.password}
-                    type={"text"}
                     className={`form-control ${
                       formik.touched.password && formik.errors.password
                         ? "error-box"
