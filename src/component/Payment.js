@@ -47,7 +47,7 @@ function Payment() {
   useEffect(() => {
     formik.setFieldValue("user_id", user._id);
     formik.setFieldValue("name", user.name);
-    formik.setFieldValue("email", user.email);
+    formik.setFieldValue("email", user.name);
     formik.setFieldValue("phone", user.phone);
     formik.setFieldValue("address", user.address);
     formik.setFieldValue("tax", tax);

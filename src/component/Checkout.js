@@ -7,15 +7,31 @@ import { UserContext } from "../utils/UserContext";
 
 function Checkout({ total }) {
   const { user } = useContext(UserContext);
+  const { subTotal } = useContext(UserContext);
+  const { tax } = useContext(UserContext);
   const { cartItems, setCartItems } = useContext(UserContext);
   const navigate = useNavigate();
 
-  const tokenHandler = async (token, user, cartItems) => {
-    const values = { token, total, user, cartItems };
-    console.log(token);
+  const tokenHandler = async (token) => {
+    const values = {
+      user_id: user._id,
+      name: user.name,
+      email: token.email,
+      phone: user.phone,
+      address: user.address,
+      payment_type: "online payment",
+      order_status: "conform",
+      pizza: cartItems,
+      sub_total: subTotal,
+      tax: tax,
+      total: total,
+      payment_status: "paid",
+    };
+
     try {
       await axios.post(`${config.api}/order`, values);
       alert("your order conform successfully");
+      setCartItems([]);
       navigate("/portal/base");
     } catch (error) {
       alert("Error");
