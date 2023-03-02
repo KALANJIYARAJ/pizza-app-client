@@ -149,6 +149,18 @@ function Login() {
                         Sign Up
                       </Link>
                     </p>
+                    <div className="bg-white rounded">
+                      <p className="text-black p-2 ">
+                        user-email:p1@gmail.com & password:12345678
+                      </p>
+                    </div>
+                    <div className="bg-white rounded">
+                      <p className="text-black p-2 ">
+                        admin-email:admin@gmail.com & password:admin123
+                      </p>
+                    </div>
+
+                    <br />
                   </div>
                 </div>
               </div>

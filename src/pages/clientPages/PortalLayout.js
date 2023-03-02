@@ -6,6 +6,7 @@ import Topbar from "../../component/Topbar";
 import Footer from "../../component/Footer";
 import { UserContext } from "../../utils/UserContext";
 import { stockControl } from "../../utils/stockControl";
+import Checkout from "../../component/Checkout";
 
 function PortalLayout() {
   const { setUser } = useContext(UserContext);
@@ -227,9 +228,10 @@ function PortalLayout() {
                 <hr />
                 <div className="row justify-content-center mt-3">
                   <div className="col-12">
-                    <Link className="btn btn-success btn-sm" to={"/payment"}>
+                    {/* <Link className="btn btn-success btn-sm" to={"/payment"}>
                       ORDER {total}
-                    </Link>
+                    </Link> */}
+                    <Checkout total={total} />
                   </div>
                 </div>
               </div>
